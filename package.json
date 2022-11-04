@@ -1,7 +1,7 @@
 {
   "name": "native-browser-otp",
-  "version": "1.0.0",
-  "description": "React component that scrolls children infinitely",
+  "version": "1.0.1",
+  "description": "Generate TOTP and HOTP with browser's native Web Cryptography.",
   "files": [
     "dist",
     "README.md",

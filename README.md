@@ -1,6 +1,6 @@
 # native-browser-otp
 
-Generate TOTP and HOTP with browsers' native Web Cryptography.
+Generate TOTP and HOTP with browser's native Web Cryptography.
 
 Very lightweight, 1.02 KiB / 0.59 KiB gzip with just one dependency.
 
