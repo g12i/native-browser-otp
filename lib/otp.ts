@@ -1,4 +1,4 @@
-import decode from "base32-decode";
+const encoder = new TextEncoder('utf-8')
 
 async function createHmac(
   secret: string,
@@ -6,7 +6,7 @@ async function createHmac(
 ): Promise<Uint8Array> {
   const key = await crypto.subtle.importKey(
     "raw",
-    decode(secret, "RFC4648"),
+    encoder.encode(secret),
     { name: "HMAC", hash: { name: "SHA-1" } },
     false,
     ["sign", "verify"]
