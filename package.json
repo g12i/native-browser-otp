@@ -1,6 +1,6 @@
 {
   "name": "native-browser-otp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate TOTP and HOTP with browser's native Web Cryptography.",
   "files": [
     "dist",
@@ -18,7 +18,8 @@
   "exports": {
     ".": {
       "import": "./dist/native-browser-otp.es.js",
-      "require": "./dist/native-browser-otp.umd.js"
+      "require": "./dist/native-browser-otp.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
