@@ -2,13 +2,19 @@ import { Card, Label, majorScale, Pane, TextInputField } from "evergreen-ui";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import QRCode from "react-qr-code";
+import { useInterval } from "react-use";
 import { totp } from "../lib";
-import { useTicker } from "./use-ticker";
+
+const getTimeLeft = () => 30 - (Math.floor(Date.now() / 1000) % 30);
 
 function App() {
   const [secret, setSecret] = useState("S2HV2DTHMDVZ6WXRZ6AP35JBBAHSQPFD");
   const [code, setCode] = useState<string | Error>("");
-  const timeLeft = useTicker();
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+  useInterval(() => {
+    setTimeLeft(getTimeLeft());
+  }, 1000);
 
   useEffect(() => {
     totp(secret).then(setCode).catch(setCode);
