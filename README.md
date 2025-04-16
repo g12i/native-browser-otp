@@ -25,7 +25,8 @@ yarn add native-browser-otp
 ```
 
 ```jsx
-import { totp } from "native-browser-otp";
+import { totp, getTimeLeft } from "native-browser-otp";
 
 const code = await totp(BASE_32_SECRET);
+const timeLeft = getTimeLeft();
 ```
