@@ -101,3 +101,12 @@ export async function totp(secret: string): Promise<string> {
 
   return code;
 }
+
+/**
+ * Remaining seconds until the next TOTP code is generated.
+ *
+ * @returns Remaining seconds
+ */
+export function getTimeLeft(): number {
+  return 30 - (Math.floor(Date.now() / 1000) % 30);
+}
