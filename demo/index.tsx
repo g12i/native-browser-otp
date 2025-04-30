@@ -3,7 +3,7 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import QRCode from "react-qr-code";
 import { useInterval } from "react-use";
-import { totp, getTimeLeft } from "../lib";
+import { totp, timeLeft as getTimeLeft } from "../lib";
 
 function App() {
   const [secret, setSecret] = useState("S2HV2DTHMDVZ6WXRZ6AP35JBBAHSQPFD");

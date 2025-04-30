@@ -1,1 +1,1 @@
-export { hotp, totp, getTimeLeft } from "./otp";
+export { hotp, totp, timeLeft } from "./otp";

@@ -107,6 +107,6 @@ export async function totp(secret: string): Promise<string> {
  *
  * @returns Remaining seconds
  */
-export function getTimeLeft(): number {
+export function timeLeft(): number {
   return 30 - (Math.floor(Date.now() / 1000) % 30);
 }
