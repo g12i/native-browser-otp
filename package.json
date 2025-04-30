@@ -1,6 +1,6 @@
 {
   "name": "native-browser-otp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Lightweight library for generating TOTP and HOTP codes using browser's native Web Cryptography API. Perfect for implementing two-factor authentication (2FA) in web applications.",
   "files": [
     "dist",
